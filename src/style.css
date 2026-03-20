@@ -53,6 +53,8 @@ h1 {
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--text-bright);
+  cursor: default;
+  user-select: none;
 }
 
 .dot {

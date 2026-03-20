@@ -230,4 +230,11 @@ async function init() {
   }
 }
 
+// Easter egg
+document.querySelector('h1').addEventListener('click', () => {
+  const u = new SpeechSynthesisUtterance('Geek E Wuss Dork');
+  u.rate = 0.9;
+  speechSynthesis.speak(u);
+});
+
 init();
