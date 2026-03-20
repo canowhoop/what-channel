@@ -231,7 +231,11 @@ async function init() {
 }
 
 // Easter egg
+let lastSpoke = 0;
 document.querySelector('h1').addEventListener('click', () => {
+  const now = Date.now();
+  if (now - lastSpoke < 4000) return;
+  lastSpoke = now;
   const u = new SpeechSynthesisUtterance('Geek E Wuss Dork');
   u.rate = 0.9;
   speechSynthesis.speak(u);
